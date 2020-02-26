@@ -64,60 +64,7 @@
             this.inputTxt.Name = "inputTxt";
             this.inputTxt.Size = new System.Drawing.Size(100, 20);
             this.inputTxt.TabIndex = 2;
-            // 
-            // guessBtn
-            // 
-            this.guessBtn.Location = new System.Drawing.Point(12, 226);
-            this.guessBtn.Name = "guessBtn";
-            this.guessBtn.Size = new System.Drawing.Size(75, 23);
-            this.guessBtn.TabIndex = 3;
-            this.guessBtn.Text = "Make Guess";
-            this.guessBtn.UseVisualStyleBackColor = true;
-            // 
-            // replayBtn
-            // 
-            this.replayBtn.Location = new System.Drawing.Point(197, 226);
-            this.replayBtn.Name = "replayBtn";
-            this.replayBtn.Size = new System.Drawing.Size(75, 23);
-            this.replayBtn.TabIndex = 4;
-            this.replayBtn.Text = "Play Again";
-            this.replayBtn.UseVisualStyleBackColor = true;
-            // 
-            // guessLbl
-            // 
-            this.guessLbl.AutoSize = true;
-            this.guessLbl.Location = new System.Drawing.Point(12, 188);
-            this.guessLbl.Name = "guessLbl";
-            this.guessLbl.Size = new System.Drawing.Size(65, 13);
-            this.guessLbl.TabIndex = 5;
-            this.guessLbl.Text = "Your Guess:";
-            // 
-            // livesLabelLbl
-            // 
-            this.livesLabelLbl.AutoSize = true;
-            this.livesLabelLbl.Location = new System.Drawing.Point(218, 9);
-            this.livesLabelLbl.Name = "livesLabelLbl";
-            this.livesLabelLbl.Size = new System.Drawing.Size(35, 13);
-            this.livesLabelLbl.TabIndex = 6;
-            this.livesLabelLbl.Text = "Lives:";
-            // 
-            // livesLbl
-            // 
-            this.livesLbl.AutoSize = true;
-            this.livesLbl.Location = new System.Drawing.Point(259, 9);
-            this.livesLbl.Name = "livesLbl";
-            this.livesLbl.Size = new System.Drawing.Size(13, 13);
-            this.livesLbl.TabIndex = 7;
-            this.livesLbl.Text = "6";
-            // 
-            // hangmanPic
-            // 
-            this.hangmanPic.Location = new System.Drawing.Point(57, 48);
-            this.hangmanPic.Name = "hangmanPic";
-            this.hangmanPic.Size = new System.Drawing.Size(100, 50);
-            this.hangmanPic.TabIndex = 8;
-            this.hangmanPic.TabStop = false;
-            // 
+            this.SuspendLayout();
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,6 +84,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.hangmanPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
 
         }
 

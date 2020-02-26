@@ -1,1 +1,2 @@
 C:\Users\mkulinski\Documents\Visual Studio 2015\Projects\HangmanGame\Hangman\Hangman\bin\Debug\Hangman.exe.config
+C:\Users\JordanWharmby\Documents\Visual Studio 2015\HangmanGame\Hangman\Hangman\bin\Debug\Hangman.exe.config
