@@ -15,12 +15,15 @@ namespace Hangman
 
         public string getWord()
         {
+
+            // Get a random number between 0 and max string
             string word = "";
             Random rand = new Random();
 
+            // Fill out arraylist from textfile
             ArrayList al = parseData();
-
-            word = al[rand.Next(0, maxWords)];            
+            word = al[rand.Next(0, maxWords)].ToString();       
+                 
             return word;
         }
 
@@ -28,6 +31,9 @@ namespace Hangman
 
         private ArrayList parseData()
         {
+            int counter = 0;
+
+            // Create new arraylist to hold parsed data
             ArrayList listofWords = new ArrayList();
             try
             {
