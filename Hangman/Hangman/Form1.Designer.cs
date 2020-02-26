@@ -159,14 +159,11 @@
             this.MaximumSize = new System.Drawing.Size(300, 283);
             this.MinimumSize = new System.Drawing.Size(300, 283);
             this.Name = "Form1";
-            this.Text = "Hangman";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.hangmanPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResumeLayout(false);
 
         }
 
