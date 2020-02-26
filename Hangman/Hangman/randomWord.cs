@@ -7,39 +7,31 @@ using System.IO;
 
 namespace Hangman
 {
-    public class WordBank
+    public class randomWord
     {
         public String wordChoice { get; set; }
-        
-    }
-
-
-
-    public static String wordGenerator()
-    {
-
-
-
 
     }
 
-    private static void parseData(ArrayList listofWords)
+
+    public void parseData(ArrayList listofWords)
     {
 
         try
         {
             using (StreamReader sr = new StreamReader("TextFile1.txt"))
             {
-                string word;
+                string word = "";
 
-                while((word = sr.ReadLine() != null)){
+                while ((word = sr.ReadLine()) != null)
+                {
                     Console.WriteLine(word);
                     listofWords.Add(word);
                 }
             }
 
         }
-        catch(Exception e)
+        catch (Exception e)
         {
             Console.WriteLine("The file could not be read:");
             Console.WriteLine(e.Message);
