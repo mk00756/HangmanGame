@@ -8,3 +8,6 @@ C:\Users\mkulinski\Documents\Visual Studio 2015\Projects\HangmanGame\Hangman\Han
 C:\Users\mkulinski\Documents\Visual Studio 2015\Projects\HangmanGame\Hangman\Hangman\obj\Debug\Hangman.csproj.GenerateResource.Cache
 C:\Users\mkulinski\Documents\Visual Studio 2015\Projects\HangmanGame\Hangman\Hangman\obj\Debug\Hangman.exe
 C:\Users\mkulinski\Documents\Visual Studio 2015\Projects\HangmanGame\Hangman\Hangman\obj\Debug\Hangman.pdb
+C:\Users\NathanYip\Documents\GitHub\HangmanGame\Hangman\Hangman\bin\Debug\Hangman.exe.config
+C:\Users\NathanYip\Documents\GitHub\HangmanGame\Hangman\Hangman\obj\Debug\Hangman.exe
+C:\Users\NathanYip\Documents\GitHub\HangmanGame\Hangman\Hangman\obj\Debug\Hangman.pdb

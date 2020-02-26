@@ -10,14 +10,25 @@ namespace Hangman
     public class randomWord
     {
         public String wordChoice { get; set; }
+        public int maxWords { get; set; }
 
 
+        public string getWord()
+        {
+            string word = "";
+            Random rand = new Random();
 
+            ArrayList al = parseData();
 
-        public void parseData()
+            word = al[rand.Next(0, maxWords)];            
+            return word;
+        }
+
+        
+
+        private ArrayList parseData()
         {
             ArrayList listofWords = new ArrayList();
-
             try
             {
                 using (StreamReader sr = new StreamReader("TextFile1.txt"))
@@ -28,6 +39,8 @@ namespace Hangman
                     {
                         Console.WriteLine(word);
                         listofWords.Add(word);
+                        counter++;
+                        
                     }
                 }
 
@@ -37,6 +50,10 @@ namespace Hangman
                 Console.WriteLine("The file could not be read:");
                 Console.WriteLine(e.Message);
             }
+
+            maxWords = counter;
+            return listofWords;
+
         }
 
     }
