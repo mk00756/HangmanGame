@@ -15,6 +15,8 @@ namespace Hangman
 
         private static string wordToGuse = "hello";
         private static string wordOnScreen = "";
+        private static int maxLives = 6;
+        private static int lives = 6;
 
         public Form1()
         {
@@ -25,9 +27,35 @@ namespace Hangman
 
         }
 
+        public static void SetWord() {
+            //Gets the word
+            wordToGuse = "";
+            //Sets the 
+        }
+
+        //Chages the word that is on the screen
         public void InitWordOnScreen() {
             //Sets the charicters in the word to guse
-            for (int i = 0; i < wordOnScreen.Length; i++) wordOnScreen += '_';
+            for (int i = 0; i < wordToGuse.Length; i++) {
+                //if the letter is a spce
+                if (wordToGuse[i] == ' ') wordOnScreen += ' ';
+                //if it is not a space
+                else wordOnScreen += '_';
+            }
+        }
+
+        //Checks if the word is compleat
+        public static bool WordIsComplete() { return wordToGuse == wordOnScreen; }
+
+        //Checs the entiyer word
+        public static bool CheckWholeWord(string s) {
+            //If the word is corect
+            if(wordToGuse == s) {
+                wordToGuse = s;
+                return true;
+            }
+            //If it is not
+            return false;
         }
 
         //Reyrns if the word contains the letter gused
@@ -47,7 +75,7 @@ namespace Hangman
                 //if it is not the right charicter
                 else temp += '*';
             }
-            //Sets the guse flag
+            //Sets the word on screen and returns if the word is right
             wordOnScreen = temp;
             return guseFlaag;
         }
