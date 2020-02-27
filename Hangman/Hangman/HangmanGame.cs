@@ -17,8 +17,6 @@ namespace Hangman {
         public static string GetWordOnScree() { return wordOnScreen; }
 
         public static void SetWordTest(string s, int ml) {
-            //Gets the word
-            randomWord rand = new randomWord();
             wordToGuse = s;
             //Sets the test input
             setWordOnScreen();
