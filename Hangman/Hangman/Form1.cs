@@ -28,12 +28,19 @@ namespace Hangman
 
         }
 
+        /* Reset the game, pick a new word */
         //H=When the player presses the play button
         private void replayBtn_Click(object sender, EventArgs e) {
             //Initilizes the game
             HangmanGame.SetWord();
             //Sets up the UI
             guessLbl.Text = "";
+
+            livesLbl.Text = "" + maxLives;
+            hangmanPic.Image = Hangman.Properties.Resources.hangman0;
+            wordOnScreen = rand.getWord();
+            wordLbl.Text = wordOnScreen;
+
             UpdateUI();
         }
 
