@@ -36,9 +36,9 @@
             this.inputLbl = new System.Windows.Forms.Label();
             this.livesLabelLbl = new System.Windows.Forms.Label();
             this.livesLbl = new System.Windows.Forms.Label();
-            this.hangmanPic = new System.Windows.Forms.PictureBox();
             this.guessLabelLbl = new System.Windows.Forms.Label();
             this.guessLbl = new System.Windows.Forms.Label();
+            this.hangmanPic = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.hangmanPic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,6 +75,7 @@
             this.inputBtn.TabIndex = 3;
             this.inputBtn.Text = "Make Guess";
             this.inputBtn.UseVisualStyleBackColor = true;
+            this.inputBtn.Click += new System.EventHandler(this.inputBtn_Click);
             // 
             // replayBtn
             // 
@@ -84,6 +85,7 @@
             this.replayBtn.TabIndex = 4;
             this.replayBtn.Text = "Play Again";
             this.replayBtn.UseVisualStyleBackColor = true;
+            this.replayBtn.Click += new System.EventHandler(this.replayBtn_Click);
             // 
             // inputLbl
             // 
@@ -139,6 +141,15 @@
             this.guessLbl.Size = new System.Drawing.Size(10, 13);
             this.guessLbl.TabIndex = 10;
             this.guessLbl.Text = ".";
+            // 
+            // hangmanPic
+            // 
+            this.hangmanPic.Location = new System.Drawing.Point(15, 52);
+            this.hangmanPic.Name = "hangmanPic";
+            this.hangmanPic.Size = new System.Drawing.Size(257, 127);
+            this.hangmanPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.hangmanPic.TabIndex = 8;
+            this.hangmanPic.TabStop = false;
             // 
             // Form1
             // 

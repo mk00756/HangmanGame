@@ -80,5 +80,17 @@ namespace Hangman
             return guseFlaag;
         }
 
+        private void inputBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /* Reset the game, pick a new word */
+        private void replayBtn_Click(object sender, EventArgs e)
+        {
+            lives = 6;
+            livesLbl.Text = "" + lives;
+
+        }
     }
 }

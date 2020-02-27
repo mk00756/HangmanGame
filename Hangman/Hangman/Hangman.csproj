@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WordBank.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,7 +82,37 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\hangman-150.png" />
+    <None Include="Resources\hangman0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hangman1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hangman2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hangman3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hangman4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hangman5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hangman6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hangman7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hangman8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hangman9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hangmanFinal.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
