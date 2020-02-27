@@ -9,7 +9,7 @@ namespace Hangman {
 
         public static int lives = 6;
 
-        private static int maxLives = 6;
+        private static int maxLives = 10;
         private static string wordToGuse = "";
         private static string wordOnScreen = "";
 
@@ -19,7 +19,7 @@ namespace Hangman {
         public static void SetWordTest(string s, int ml) {
             //Gets the word
             randomWord rand = new randomWord();
-            wordToGuse = rand.getWord();
+            wordToGuse = s;
             //Sets the test input
             setWordOnScreen();
             //Sets the lives
@@ -30,10 +30,10 @@ namespace Hangman {
         //Sets the word that the player needs to guse
         public static void SetWord() {
             //Gets the word
-            wordToGuse = "test input";
+            randomWord rand = new randomWord();
+            wordToGuse = rand.getWord();
             //Sets the test input
             setWordOnScreen();
-            //Sets the lives
             lives = maxLives;
         }
 
