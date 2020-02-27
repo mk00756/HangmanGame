@@ -10,10 +10,11 @@ namespace Hangman
     public class randomWord
     {
         public String wordChoice { get; set; }
+
         public int maxWords { get; set; }
 
 
-        public string getWord()
+        private void getWord()
         {
 
             // Get a random number between 0 and max string
@@ -22,9 +23,10 @@ namespace Hangman
 
             // Fill out arraylist from textfile
             ArrayList al = parseData();
-            word = al[rand.Next(0, maxWords)].ToString();       
-                 
-            return word;
+            word = al[rand.Next(0, maxWords)].ToString();
+
+            wordChoice = word;
+
         }
 
         

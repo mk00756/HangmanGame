@@ -11,3 +11,5 @@ C:\Users\mkulinski\Documents\Visual Studio 2015\Projects\HangmanGame\Hangman\Han
 C:\Users\NathanYip\Documents\GitHub\HangmanGame\Hangman\Hangman\bin\Debug\Hangman.exe.config
 C:\Users\NathanYip\Documents\GitHub\HangmanGame\Hangman\Hangman\obj\Debug\Hangman.exe
 C:\Users\NathanYip\Documents\GitHub\HangmanGame\Hangman\Hangman\obj\Debug\Hangman.pdb
+C:\Users\JordanWharmby\Documents\Visual Studio 2015\HangmanGame\Hangman\Hangman\obj\Debug\Hangman.exe
+C:\Users\JordanWharmby\Documents\Visual Studio 2015\HangmanGame\Hangman\Hangman\obj\Debug\Hangman.pdb
