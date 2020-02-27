@@ -24,7 +24,6 @@ namespace Hangman
             // Fill out arraylist from textfile
             ArrayList al = parseData();
             word = al[rand.Next(0, maxWords)].ToString();
-
             return word;
         }
 
@@ -33,12 +32,11 @@ namespace Hangman
         private ArrayList parseData()
         {
             int counter = 0;
-
             // Create new arraylist to hold parsed data
             ArrayList listofWords = new ArrayList();
             try
             {
-                using (StreamReader sr = new StreamReader("TextFile1.txt"))
+                using (StreamReader sr = new StreamReader("../../TextFile1.txt"))
                 {
                     string word = "";
 
@@ -47,7 +45,7 @@ namespace Hangman
                         Console.WriteLine(word);
                         listofWords.Add(word);
                         counter++;
-                        
+
                     }
                 }
 
