@@ -59,7 +59,7 @@ namespace Hangman
             }
             else {
                 HangmanGame.lives--;
-                if(lives <= 0) {
+                if(HangmanGame.lives <= 0) {
                     //disables the input for the game
                     inputBtn.Enabled = false;
                     //Enables the replay button
