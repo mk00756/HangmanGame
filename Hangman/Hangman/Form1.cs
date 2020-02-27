@@ -72,10 +72,46 @@ namespace Hangman
                     //Enables the replay button
                     replayBtn.Enabled = true;
                     inputTxt.Text = "";
+                    MessageBox.Show("Game over! You won!");
                 }
             }
             else {
                 HangmanGame.lives--;
+                switch (HangmanGame.lives){
+                    case 0:
+                        hangmanPic.Image = Hangman.Properties.Resources.hangmanFinal;
+                        break;
+                    case 1:
+                        hangmanPic.Image = Hangman.Properties.Resources.hangman9;
+                        break;
+                    case 2:
+                        hangmanPic.Image = Hangman.Properties.Resources.hangman8;
+                        break;
+                    case 3:
+                        hangmanPic.Image = Hangman.Properties.Resources.hangman7;
+                        break;
+                    case 4:
+                        hangmanPic.Image = Hangman.Properties.Resources.hangman6;
+                        break;
+                    case 5:
+                        hangmanPic.Image = Hangman.Properties.Resources.hangman5;
+                        break;
+                    case 6:
+                        hangmanPic.Image = Hangman.Properties.Resources.hangman4;
+                        break;
+                    case 7:
+                        hangmanPic.Image = Hangman.Properties.Resources.hangman3;
+                        break;
+                    case 8:
+                        hangmanPic.Image = Hangman.Properties.Resources.hangman2;
+                        break;
+                    case 9:
+                        hangmanPic.Image = Hangman.Properties.Resources.hangman1;
+                        break;
+                    default:
+                        hangmanPic.Image = Hangman.Properties.Resources.hangman0;
+                        break;
+                }
                 //If they are out of lives
                 if(HangmanGame.lives <= 0) {
                     //disables the input for the game
@@ -90,7 +126,7 @@ namespace Hangman
 
             if (HangmanGame.lives <= 0)
             {
-                MessageBox.Show("Game over!");
+                MessageBox.Show("Game over! You lost!");
                 replayBtn.Enabled = true;
             }
         }
