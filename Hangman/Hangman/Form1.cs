@@ -61,5 +61,20 @@ namespace Hangman
             //Updates the UI
             UpdateUI();
         }
+
+        private void inputBtn_Click(object sender, EventArgs e)
+        {
+            lives--;
+            livesLbl.Text = "" + lives;
+        }
+
+        /* Reset the game, pick a new word */
+        private void replayBtn_Click(object sender, EventArgs e)
+        {
+            livesLbl.Text = "" + maxLives;
+            hangmanPic.Image = Hangman.Properties.Resources.hangman0;
+            wordOnScreen = rand.getWord();
+            wordLbl.Text = wordOnScreen;
+        }
     }
 }
