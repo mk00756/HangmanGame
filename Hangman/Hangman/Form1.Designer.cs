@@ -116,7 +116,6 @@
             // 
             // hangmanPic
             // 
-            //this.hangmanPic.Image = global::Hangman.Properties.Resources.hangmanFinal;
             this.hangmanPic.Location = new System.Drawing.Point(15, 52);
             this.hangmanPic.Name = "hangmanPic";
             this.hangmanPic.Size = new System.Drawing.Size(257, 127);

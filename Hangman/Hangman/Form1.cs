@@ -28,73 +28,38 @@ namespace Hangman
 
         }
 
-        public static void SetWord() {
-            //Gets the word
-            wordToGuse = "";
-            //Sets the 
+        //H=When the player presses the play button
+        private void replayBtn_Click(object sender, EventArgs e) {
+            //Initilizes the game
+            HangmanGame.SetWord();
+            //Sets up the UI
+            guessLbl.Text = "";
+            UpdateUI();
         }
 
-        //Chages the word that is on the screen
-        public void InitWordOnScreen() {
-            //Sets the charicters in the word to guse
-            for (int i = 0; i < wordToGuse.Length; i++) {
-                //if the letter is a spce
-                if (wordToGuse[i] == ' ') wordOnScreen += ' ';
-                //if it is not a space
-                else wordOnScreen += '_';
+        public void UpdateUI() {
+            replayBtn.Enabled = false;
+            wordLbl.Text = HangmanGame.GetWordToGuse();
+            livesLbl.Text = HangmanGame.lives.ToString();
+            inputTxt.Text = "";
+        }
+
+        private void inputBtn_Click(object sender, EventArgs e) {
+            //If the input is valid
+            if (inputTxt.Text.Length < 1) return;
+            else if (inputTxt.Text[0] == ' ') return;
+            //Adds charicter to the list
+            if (inputTxt.Text.Length == 1) guessLbl.Text += inputTxt.Text[0];
+            //Checs if they got it correct
+            bool right = HangmanGame.CheckInput(inputTxt.Text);
+            if (right) {
+
             }
-        }
-
-        //Checks if the word is compleat
-        public static bool WordIsComplete() { return wordToGuse == wordOnScreen; }
-
-        //Checs the entiyer word
-        public static bool CheckWholeWord(string s) {
-            //If the word is corect
-            if(wordToGuse == s) {
-                wordToGuse = s;
-                return true;
+            else {
+                HangmanGame.lives--;
             }
-            //If it is not
-            return false;
-        }
-
-        //Reyrns if the word contains the letter gused
-        public static bool DoesContainWord(char input) {
-            //Flag
-            bool guseFlaag = false;
-            //Tepoery input
-            string temp = "";
-            //Loops throug the word
-            for (int i = 0; i < wordToGuse.Length; i++) {
-                //if the letter has not
-                if (wordToGuse[i] == input && wordOnScreen[i] != '*') {
-                    //Sets the imput and the guse flag
-                    temp += input;
-                    guseFlaag = true;
-                }
-                //if it is not the right charicter
-                else temp += '*';
-            }
-            //Sets the word on screen and returns if the word is right
-            wordOnScreen = temp;
-            return guseFlaag;
-        }
-
-        private void inputBtn_Click(object sender, EventArgs e)
-        {
-            lives--;
-            livesLbl.Text = "" + lives;
-        }
-
-        /* Reset the game, pick a new word */
-        private void replayBtn_Click(object sender, EventArgs e)
-        {
-            livesLbl.Text = "" + maxLives;
-            hangmanPic.Image = Hangman.Properties.Resources.hangman0;
-            wordOnScreen = rand.getWord();
-            wordLbl.Text = wordOnScreen;
-            MessageBox.Show(Environment.CurrentDirectory);
+            //Updates the UI
+            UpdateUI();
         }
     }
 }

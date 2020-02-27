@@ -7,15 +7,40 @@ using System.Threading.Tasks;
 namespace Hangman {
     public static class HangmanGame {
 
+        public static int lives = 6;
+
+        private static int maxLives = 6;
         private static string wordToGuse = "";
         private static string wordOnScreen = "";
-        private static int maxLives = 6;
-        private static int lives = 6;
 
+        public static string GetWordToGuse() { return wordToGuse; }
+        public static string GetWordOnScree() { return wordOnScreen; }
+
+        public static void SetWordTest(string s) {
+            //Gets the word
+            wordToGuse = s;
+            //Sets the test input
+            setWordOnScreen();
+            //Sets the lives
+            lives = maxLives;
+        }
+
+        //Sets the word that the player needs to guse
         public static void SetWord() {
             //Gets the word
-            wordToGuse = "";
-            //This is a test
+            wordToGuse = "test input";
+            //Sets the test input
+            setWordOnScreen();
+            //Sets the lives
+            lives = maxLives;
+        }
+
+        //Handels input
+        public static bool CheckInput(string input) {
+            //Whole word
+            if (input.Length > 1) return CheckWholeWord(input);
+            //Single letter
+            else return DoseContainLetter(input[0]);
         }
 
         //Chages the word that is on the screen
@@ -26,6 +51,15 @@ namespace Hangman {
                 if (wordToGuse[i] == ' ') wordOnScreen += ' ';
                 //if it is not a space
                 else wordOnScreen += '_';
+            }
+        }
+
+        //Sets the word on screen
+        private static void setWordOnScreen() {
+            for(int i = 0; i < wordToGuse.Length; i++) {
+                //Sets the qword to guse
+                if (wordToGuse[i] == ' ') wordToGuse += ' ';
+                else wordToGuse += '_';
             }
         }
 
@@ -44,7 +78,7 @@ namespace Hangman {
         }
 
         //Reyrns if the word contains the letter gused
-        public static bool DoesContainWord(char input) {
+        public static bool DoseContainLetter(char input) {
             //Flag
             bool guseFlaag = false;
             //Tepoery input
