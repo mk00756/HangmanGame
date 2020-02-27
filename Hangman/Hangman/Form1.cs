@@ -17,6 +17,7 @@ namespace Hangman
         private static string wordOnScreen = "";
         private static int maxLives = 10;
         private static int lives = 6;
+        public randomWord rand = new randomWord();
 
         public Form1()
         {
@@ -90,7 +91,8 @@ namespace Hangman
         {
             livesLbl.Text = "" + maxLives;
             hangmanPic.Image = Hangman.Properties.Resources.hangman0;
-
+            wordOnScreen = rand.getWord();
+            wordLbl.Text = wordOnScreen;
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Hangman
         public int maxWords { get; set; }
 
 
-        private void getWord()
+        public string getWord()
         {
 
             // Get a random number between 0 and max string
@@ -25,8 +25,7 @@ namespace Hangman
             ArrayList al = parseData();
             word = al[rand.Next(0, maxWords)].ToString();
 
-            wordChoice = word;
-
+            return word;
         }
 
         
