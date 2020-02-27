@@ -34,7 +34,7 @@ namespace Hangman
             //Sets up the UI
             guessLbl.Text = "";
             //disables the input for the game
-            inputBtn.Enabled = false;
+            inputBtn.Enabled = true;
             hangmanPic.Image = Hangman.Properties.Resources.hangman0;
             UpdateUI();
         }
