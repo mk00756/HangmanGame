@@ -30,11 +30,12 @@ namespace HangmanTest
         [DataRow ("hello", "hello", true)]
         [DataRow("hello", "goodbye", false)]
         [DataTestMethod]
-        public void TestWordIsComplete(string wordToGuess, string wordOnScreen, string expResult)
+        public void TestWordIsComplete(string wordToGuess, string wordOnScreen, bool expResult)
         {
             //set wordToGuse to wordToGuess
             //set wordOnScreen to wordOnScreen
             //run wordIsComplete
+            Assert.AreEqual(true, true);
         }
     }
 }
