@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace Hangman {
     public static class HangmanGame {
 
-        public static int lives = 6;
+        public static int lives = 0;
+        public static int maxLives = 10;
 
-        private static int maxLives = 10;
         private static string wordToGuse = "";
         private static string wordOnScreen = "";
 

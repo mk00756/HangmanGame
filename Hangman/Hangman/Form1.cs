@@ -57,13 +57,16 @@ namespace Hangman
         }
 
         private void inputBtn_Click(object sender, EventArgs e) {
+            //Gets the text and sets it to lower case
+            string input = inputTxt.Text.ToLower();
             //If the input is valid
-            if (inputTxt.Text.Length < 1) return;
-            else if (inputTxt.Text[0] == ' ') return;
+            if (input.Length < 1) return;
+            else if (input[0] == ' ') return;
             //Adds charicter to the list
-            if (inputTxt.Text.Length == 1) guessLbl.Text += inputTxt.Text[0];
+            if (guessLbl.Text != "") guessLbl.Text += ", ";
+            if (input.Length == 1) guessLbl.Text += input[0];
             //Checs if they got it correct
-            bool right = HangmanGame.CheckInput(inputTxt.Text);
+            bool right = HangmanGame.CheckInput(input);
             if (right) {
                 //if they have cmpleted the word
                 if(HangmanGame.WordIsComplete()) {
