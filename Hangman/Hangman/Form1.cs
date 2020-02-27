@@ -14,9 +14,19 @@ namespace Hangman
     {
         public randomWord rand = new randomWord();
 
+        private void CheckEnter(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                inputBtn.PerformClick();
+            }
+        }
+
         public Form1()
         {
             InitializeComponent();
+            this.inputTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(CheckEnter);
+
         }
 
         private void Form1_Load(object sender, EventArgs e) {
