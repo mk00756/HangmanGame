@@ -39,7 +39,7 @@ namespace Hangman
 
         public void UpdateUI() {
             replayBtn.Enabled = false;
-            wordLbl.Text = HangmanGame.GetWordToGuse();
+            wordLbl.Text = HangmanGame.GetWordOnScree();
             livesLbl.Text = HangmanGame.lives.ToString();
             inputTxt.Text = "";
         }

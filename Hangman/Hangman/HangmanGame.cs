@@ -58,8 +58,8 @@ namespace Hangman {
         private static void setWordOnScreen() {
             for(int i = 0; i < wordToGuse.Length; i++) {
                 //Sets the qword to guse
-                if (wordToGuse[i] == ' ') wordToGuse += ' ';
-                else wordToGuse += '_';
+                if (wordToGuse[i] == ' ') wordOnScreen += ' ';
+                else wordOnScreen += '_';
             }
         }
 
