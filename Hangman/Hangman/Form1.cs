@@ -87,6 +87,12 @@ namespace Hangman
             }
             //Updates the UI
             UpdateUI();
+
+            if (HangmanGame.lives <= 0)
+            {
+                MessageBox.Show("Game over!");
+                replayBtn.Enabled = true;
+            }
         }
     }
 }
