@@ -114,15 +114,6 @@
             this.livesLbl.TabIndex = 7;
             this.livesLbl.Text = "6";
             // 
-            // hangmanPic
-            // 
-            this.hangmanPic.Location = new System.Drawing.Point(15, 52);
-            this.hangmanPic.Name = "hangmanPic";
-            this.hangmanPic.Size = new System.Drawing.Size(257, 127);
-            this.hangmanPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.hangmanPic.TabIndex = 8;
-            this.hangmanPic.TabStop = false;
-            // 
             // guessLabelLbl
             // 
             this.guessLabelLbl.AutoSize = true;
@@ -169,7 +160,7 @@
             this.MaximumSize = new System.Drawing.Size(300, 283);
             this.MinimumSize = new System.Drawing.Size(300, 283);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Hangman";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.hangmanPic)).EndInit();
             this.ResumeLayout(false);
