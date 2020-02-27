@@ -30,6 +30,7 @@ namespace Hangman {
             //Gets the word
             randomWord rand = new randomWord();
             wordToGuse = rand.getWord();
+            wordOnScreen = "";
             //Sets the test input
             setWordOnScreen();
             lives = maxLives;
@@ -70,7 +71,7 @@ namespace Hangman {
         public static bool CheckWholeWord(string s) {
             //If the word is corect
             if (wordToGuse == s) {
-                wordToGuse = s;
+                wordOnScreen = s;
                 return true;
             }
             //If it is not
