@@ -35,12 +35,12 @@ namespace Hangman
             guessLbl.Text = "";
             //disables the input for the game
             inputBtn.Enabled = true;
+            replayBtn.Enabled = false;
             hangmanPic.Image = Hangman.Properties.Resources.hangman0;
             UpdateUI();
         }
 
         public void UpdateUI() {
-            replayBtn.Enabled = false;
             wordLbl.Text = HangmanGame.GetWordOnScree();
             livesLbl.Text = HangmanGame.lives.ToString();
             inputTxt.Text = "";
@@ -55,10 +55,18 @@ namespace Hangman
             //Checs if they got it correct
             bool right = HangmanGame.CheckInput(inputTxt.Text);
             if (right) {
-
+                //if they have cmpleted the word
+                if(HangmanGame.WordIsComplete()) {
+                    //disables the input for the game
+                    inputBtn.Enabled = false;
+                    //Enables the replay button
+                    replayBtn.Enabled = true;
+                    inputTxt.Text = "";
+                }
             }
             else {
                 HangmanGame.lives--;
+                //If they are out of lives
                 if(HangmanGame.lives <= 0) {
                     //disables the input for the game
                     inputBtn.Enabled = false;

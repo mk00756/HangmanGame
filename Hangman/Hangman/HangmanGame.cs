@@ -18,7 +18,7 @@ namespace Hangman {
 
         public static void SetWordTest(string s, int ml) {
             //Gets the word
-            randomWord rand = new randomWord();
+            randomWord rand = s;
             wordToGuse = s;
             //Sets the test input
             setWordOnScreen();
