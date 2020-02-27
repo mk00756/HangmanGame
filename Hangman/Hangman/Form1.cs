@@ -15,7 +15,7 @@ namespace Hangman
 
         private static string wordToGuse = "hello";
         private static string wordOnScreen = "";
-        private static int maxLives = 6;
+        private static int maxLives = 10;
         private static int lives = 6;
 
         public Form1()
@@ -88,8 +88,8 @@ namespace Hangman
         /* Reset the game, pick a new word */
         private void replayBtn_Click(object sender, EventArgs e)
         {
-            lives = 6;
-            livesLbl.Text = "" + lives;
+            livesLbl.Text = "" + maxLives;
+            hangmanPic.Image = Hangman.Properties.Resources.hangman0;
 
         }
     }
