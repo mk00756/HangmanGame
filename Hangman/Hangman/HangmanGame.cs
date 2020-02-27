@@ -16,12 +16,14 @@ namespace Hangman {
         public static string GetWordToGuse() { return wordToGuse; }
         public static string GetWordOnScree() { return wordOnScreen; }
 
-        public static void SetWordTest(string s) {
+        public static void SetWordTest(string s, int ml) {
             //Gets the word
-            wordToGuse = s;
+            randomWord rand = new randomWord();
+            wordToGuse = rand.getWord();
             //Sets the test input
             setWordOnScreen();
             //Sets the lives
+            maxLives = ml;
             lives = maxLives;
         }
 
@@ -86,13 +88,14 @@ namespace Hangman {
             //Loops throug the word
             for (int i = 0; i < wordToGuse.Length; i++) {
                 //if the letter has not
-                if (wordToGuse[i] == input && wordOnScreen[i] != '*') {
+                if (wordToGuse[i] == input && wordOnScreen[i] == '_') {
                     //Sets the imput and the guse flag
                     temp += input;
                     guseFlaag = true;
                 }
                 //if it is not the right charicter
-                else temp += '*';
+                else if (wordOnScreen[i] == '_') temp += '_';
+                else temp += wordOnScreen[i];
             }
             //Sets the word on screen and returns if the word is right
             wordOnScreen = temp;

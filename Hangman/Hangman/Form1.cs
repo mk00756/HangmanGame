@@ -12,11 +12,6 @@ namespace Hangman
 {
     public partial class Form1 : Form
     {
-
-        private static string wordToGuse = "hello";
-        private static string wordOnScreen = "";
-        private static int maxLives = 10;
-        private static int lives = 10;
         public randomWord rand = new randomWord();
 
         public Form1()
@@ -25,7 +20,10 @@ namespace Hangman
         }
 
         private void Form1_Load(object sender, EventArgs e) {
-
+            //disables the input for the game
+            inputBtn.Enabled = false;
+            //Enables the replay button
+            replayBtn.Enabled = true;
         }
 
         /* Reset the game, pick a new word */
@@ -35,12 +33,9 @@ namespace Hangman
             HangmanGame.SetWord();
             //Sets up the UI
             guessLbl.Text = "";
-
-            livesLbl.Text = "" + maxLives;
+            //disables the input for the game
+            inputBtn.Enabled = false;
             hangmanPic.Image = Hangman.Properties.Resources.hangman0;
-            wordOnScreen = rand.getWord();
-            wordLbl.Text = wordOnScreen;
-
             UpdateUI();
         }
 
@@ -64,6 +59,13 @@ namespace Hangman
             }
             else {
                 HangmanGame.lives--;
+                if(lives <= 0) {
+                    //disables the input for the game
+                    inputBtn.Enabled = false;
+                    //Enables the replay button
+                    replayBtn.Enabled = true;
+                    inputTxt.Text = ""; 
+                }
             }
             //Updates the UI
             UpdateUI();
